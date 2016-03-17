@@ -140,7 +140,7 @@ v0.1</text>
 <wire x1="24.3" y1="42.2" x2="24.3" y2="48.9" width="0.6096" layer="21"/>
 <wire x1="24.3" y1="48.9" x2="34.3" y2="48.9" width="0.6096" layer="21"/>
 <wire x1="34.3" y1="48.9" x2="34.3" y2="42.2" width="0.6096" layer="21"/>
-<text x="-2.6" y="10.8" size="1.778" layer="25" rot="R90">not yet ordered</text>
+<text x="-2.6" y="10.8" size="1.778" layer="25" rot="R90">ordered @ elecrow 2016/03/16</text>
 <wire x1="21.5" y1="7.5" x2="6.3" y2="7.5" width="0.6096" layer="21"/>
 <wire x1="21.5" y1="0.8" x2="6.3" y2="0.8" width="0.6096" layer="21"/>
 <wire x1="6.3" y1="7.5" x2="6.3" y2="0.8" width="0.6096" layer="21"/>
