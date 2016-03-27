@@ -1,2 +1,2 @@
-# CHIP_ONION
-a prototype board
+please go to
+http://koljawindeler.github.io/CHIP_ONION/
