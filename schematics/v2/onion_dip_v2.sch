@@ -9529,7 +9529,6 @@ W = angled&lt;p&gt;
 <part name="SV11" library="con-lstb_no_frame" deviceset="MA05-2" device=""/>
 <part name="SV20" library="con-lstb_no_frame" deviceset="MA07-2" device=""/>
 <part name="SV21" library="con-lstb_no_frame" deviceset="MA07-2" device=""/>
-<part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
@@ -9550,10 +9549,8 @@ W = angled&lt;p&gt;
 <part name="U$6" library="logo" deviceset="LOGO_3X3_COPPER" device=""/>
 <part name="LED1" library="led" deviceset="LED" device="CHIP-LED0805"/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="330R"/>
-<part name="P+5" library="supply1" deviceset="VCC" device=""/>
 <part name="LED2" library="led" deviceset="LED" device="CHIP-LED0805"/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="R0805" value="330R"/>
-<part name="P+7" library="supply1" deviceset="VCC" device=""/>
 <part name="U$5" library="logo" deviceset="LOGO_10X10_SILK" device=""/>
 <part name="SV5" library="con-lstb_no_frame" deviceset="MA03-1" device=""/>
 <part name="SV7" library="con-lstb_no_frame" deviceset="MA07-2" device=""/>
@@ -9611,7 +9608,6 @@ Close right = input is 7 - 28V</text>
 <instance part="SV11" gate="G$1" x="142.24" y="218.44" rot="R270"/>
 <instance part="SV20" gate="G$1" x="86.36" y="284.48" rot="R270"/>
 <instance part="SV21" gate="G$1" x="86.36" y="259.08" rot="R270"/>
-<instance part="P+2" gate="VCC" x="370.84" y="292.1"/>
 <instance part="P+4" gate="VCC" x="147.32" y="195.58" smashed="yes">
 <attribute name="VALUE" x="152.4" y="193.04" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -9640,10 +9636,8 @@ Close right = input is 7 - 28V</text>
 <instance part="U$6" gate="G$1" x="289.56" y="101.6"/>
 <instance part="LED1" gate="G$1" x="358.14" y="281.94"/>
 <instance part="R2" gate="G$1" x="358.14" y="266.7" rot="R270"/>
-<instance part="P+5" gate="VCC" x="358.14" y="292.1"/>
 <instance part="LED2" gate="G$1" x="342.9" y="281.94"/>
 <instance part="R3" gate="G$1" x="342.9" y="266.7" rot="R270"/>
-<instance part="P+7" gate="VCC" x="342.9" y="292.1"/>
 <instance part="U$5" gate="G$1" x="289.56" y="86.36"/>
 <instance part="SV5" gate="G$1" x="86.36" y="347.98" rot="R270"/>
 <instance part="SV7" gate="G$1" x="86.36" y="231.14" rot="R270"/>
@@ -9917,6 +9911,19 @@ Close right = input is 7 - 28V</text>
 <junction x="154.94" y="88.9"/>
 <label x="157.48" y="88.9" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="LED2" gate="G$1" pin="A"/>
+<wire x1="342.9" y1="284.48" x2="342.9" y2="289.56" width="0.1524" layer="91"/>
+<pinref part="LED5" gate="G$1" pin="A"/>
+<wire x1="370.84" y1="289.56" x2="370.84" y2="284.48" width="0.1524" layer="91"/>
+<wire x1="370.84" y1="289.56" x2="358.14" y2="289.56" width="0.1524" layer="91"/>
+<junction x="342.9" y="289.56"/>
+<wire x1="358.14" y1="289.56" x2="342.9" y2="289.56" width="0.1524" layer="91"/>
+<wire x1="342.9" y1="289.56" x2="314.96" y2="289.56" width="0.1524" layer="91"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
+<wire x1="358.14" y1="289.56" x2="358.14" y2="284.48" width="0.1524" layer="91"/>
+<junction x="358.14" y="289.56"/>
+</segment>
 </net>
 <net name="_1V8" class="0">
 <segment>
@@ -10002,6 +10009,11 @@ Close right = input is 7 - 28V</text>
 <pinref part="SV11" gate="G$1" pin="5"/>
 <wire x1="142.24" y1="210.82" x2="142.24" y2="200.66" width="0.1524" layer="91"/>
 <label x="142.24" y="203.2" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="342.9" y1="261.62" x2="342.9" y2="243.84" width="0.1524" layer="91"/>
+<label x="342.9" y="248.92" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="AP" class="0">
@@ -10202,11 +10214,6 @@ Close right = input is 7 - 28V</text>
 <pinref part="SV11" gate="G$1" pin="3"/>
 <wire x1="139.7" y1="210.82" x2="139.7" y2="200.66" width="0.1524" layer="91"/>
 <label x="139.7" y="203.2" size="1.778" layer="95" rot="R90"/>
-</segment>
-<segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="342.9" y1="261.62" x2="342.9" y2="243.84" width="0.1524" layer="91"/>
-<label x="342.9" y="248.92" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="ADC" class="0">
@@ -10590,11 +10597,6 @@ Close right = input is 7 - 28V</text>
 <junction x="-48.26" y="93.98"/>
 </segment>
 <segment>
-<pinref part="LED5" gate="G$1" pin="A"/>
-<wire x1="370.84" y1="289.56" x2="370.84" y2="284.48" width="0.1524" layer="91"/>
-<pinref part="P+2" gate="VCC" pin="VCC"/>
-</segment>
-<segment>
 <pinref part="SV10" gate="G$1" pin="10"/>
 <pinref part="P+4" gate="VCC" pin="VCC"/>
 <wire x1="147.32" y1="193.04" x2="147.32" y2="190.5" width="0.1524" layer="91"/>
@@ -10647,16 +10649,6 @@ Close right = input is 7 - 28V</text>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
 <wire x1="-30.48" y1="35.56" x2="-30.48" y2="33.02" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="LED1" gate="G$1" pin="A"/>
-<pinref part="P+5" gate="VCC" pin="VCC"/>
-<wire x1="358.14" y1="289.56" x2="358.14" y2="284.48" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+7" gate="VCC" pin="VCC"/>
-<pinref part="LED2" gate="G$1" pin="A"/>
-<wire x1="342.9" y1="284.48" x2="342.9" y2="289.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SV7" gate="G$1" pin="13"/>
