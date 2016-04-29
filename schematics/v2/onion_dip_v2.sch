@@ -305,9 +305,7 @@ W = angled&lt;p&gt;
 <pad name="35" x="21.59" y="1.27" drill="0.9144" shape="octagon"/>
 <pad name="36" x="21.59" y="-1.27" drill="0.9144" shape="octagon"/>
 <text x="-16.51" y="3.429" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-21.971" y="3.429" size="1.27" layer="21" ratio="10">1</text>
 <text x="-22.86" y="-4.699" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<text x="20.701" y="-4.699" size="1.27" layer="21" ratio="10">36</text>
 </package>
 </packages>
 <symbols>
