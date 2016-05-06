@@ -10229,7 +10229,7 @@ DIN A3, landscape with extra doc field</description>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="LED5" library="led" deviceset="LED" device="CHIP-LED0805"/>
+<part name="RELAY" library="led" deviceset="LED" device="CHIP-LED0805"/>
 <part name="R7" library="rcl" deviceset="R-EU_" device="R0805" value="330R"/>
 <part name="P+9" library="supply1" deviceset="VCC" device=""/>
 <part name="U$1" library="SRD-05VDC-SL-C" deviceset="RELAY" device="PTH"/>
@@ -10263,9 +10263,9 @@ DIN A3, landscape with extra doc field</description>
 <part name="COMM" library="pinhead" deviceset="PINHD-1X6" device=""/>
 <part name="U$4" library="logo" deviceset="LOGO_3X3_COPPER" device=""/>
 <part name="U$6" library="logo" deviceset="LOGO_3X3_COPPER" device=""/>
-<part name="LED1" library="led" deviceset="LED" device="CHIP-LED0805"/>
+<part name="P3" library="led" deviceset="LED" device="CHIP-LED0805"/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="330R"/>
-<part name="LED2" library="led" deviceset="LED" device="CHIP-LED0805"/>
+<part name="P1" library="led" deviceset="LED" device="CHIP-LED0805"/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="R0805" value="330R"/>
 <part name="U$5" library="logo" deviceset="LOGO_10X10_SILK" device=""/>
 <part name="SV7" library="con-lstb_no_frame" deviceset="MA07-2" device=""/>
@@ -10277,6 +10277,8 @@ DIN A3, landscape with extra doc field</description>
 <part name="FRAME1" library="frames" deviceset="DINA3_L" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="PWRCH" library="jumper" deviceset="SJ2W" device=""/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="R0805" value="10k"/>
+<part name="D1" library="diode" deviceset="DIODE-" device="SMB"/>
 </parts>
 <sheets>
 <sheet>
@@ -10335,7 +10337,7 @@ Close right = input is 7 - 28V</text>
 <instance part="GND1" gate="1" x="66.04" y="355.6" rot="MR0"/>
 <instance part="GND2" gate="1" x="17.78" y="347.98" rot="MR0"/>
 <instance part="GND3" gate="1" x="-2.54" y="350.52" rot="MR0"/>
-<instance part="LED5" gate="G$1" x="340.36" y="467.36"/>
+<instance part="RELAY" gate="G$1" x="340.36" y="467.36"/>
 <instance part="R7" gate="G$1" x="340.36" y="449.58" rot="R270"/>
 <instance part="P+9" gate="VCC" x="33.02" y="406.4"/>
 <instance part="U$1" gate="G$1" x="309.88" y="391.16" rot="MR180"/>
@@ -10377,9 +10379,9 @@ Close right = input is 7 - 28V</text>
 <instance part="COMM" gate="A" x="137.16" y="553.72"/>
 <instance part="U$4" gate="G$1" x="170.18" y="330.2"/>
 <instance part="U$6" gate="G$1" x="170.18" y="337.82"/>
-<instance part="LED1" gate="G$1" x="325.12" y="467.36"/>
+<instance part="P3" gate="G$1" x="325.12" y="467.36"/>
 <instance part="R2" gate="G$1" x="325.12" y="449.58" rot="R270"/>
-<instance part="LED2" gate="G$1" x="309.88" y="467.36"/>
+<instance part="P1" gate="G$1" x="309.88" y="467.36"/>
 <instance part="R3" gate="G$1" x="309.88" y="449.58" rot="R270"/>
 <instance part="U$5" gate="G$1" x="170.18" y="345.44"/>
 <instance part="SV7" gate="G$1" x="91.44" y="462.28" rot="R270"/>
@@ -10392,6 +10394,8 @@ Close right = input is 7 - 28V</text>
 <instance part="FRAME1" gate="G$2" x="256.54" y="327.66"/>
 <instance part="GND11" gate="1" x="48.26" y="391.16"/>
 <instance part="PWRCH" gate="G$1" x="7.62" y="401.32" rot="R90"/>
+<instance part="R8" gate="G$1" x="248.92" y="386.08" rot="R270"/>
+<instance part="D1" gate="G$1" x="35.56" y="355.6" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -10459,7 +10463,13 @@ Close right = input is 7 - 28V</text>
 <segment>
 <pinref part="U$3" gate="G$1" pin="S"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="259.08" y1="381" x2="259.08" y2="388.62" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="381" x2="259.08" y2="383.54" width="0.1524" layer="91"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="259.08" y1="383.54" x2="259.08" y2="388.62" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="381" x2="251.46" y2="381" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="381" x2="251.46" y2="383.54" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="383.54" x2="259.08" y2="383.54" width="0.1524" layer="91"/>
+<junction x="259.08" y="383.54"/>
 </segment>
 <segment>
 <pinref part="I2C_1" gate="G$1" pin="1"/>
@@ -10628,9 +10638,9 @@ Close right = input is 7 - 28V</text>
 <label x="190.5" y="472.44" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED2" gate="G$1" pin="A"/>
+<pinref part="P1" gate="G$1" pin="A"/>
 <wire x1="309.88" y1="469.9" x2="309.88" y2="474.98" width="0.1524" layer="91"/>
-<pinref part="LED5" gate="G$1" pin="A"/>
+<pinref part="RELAY" gate="G$1" pin="A"/>
 <wire x1="340.36" y1="474.98" x2="340.36" y2="469.9" width="0.1524" layer="91"/>
 <wire x1="340.36" y1="474.98" x2="332.74" y2="474.98" width="0.1524" layer="91"/>
 <junction x="309.88" y="474.98"/>
@@ -10638,7 +10648,7 @@ Close right = input is 7 - 28V</text>
 <wire x1="325.12" y1="474.98" x2="317.5" y2="474.98" width="0.1524" layer="91"/>
 <wire x1="317.5" y1="474.98" x2="309.88" y2="474.98" width="0.1524" layer="91"/>
 <wire x1="309.88" y1="474.98" x2="302.26" y2="474.98" width="0.1524" layer="91"/>
-<pinref part="LED1" gate="G$1" pin="A"/>
+<pinref part="P3" gate="G$1" pin="A"/>
 <wire x1="302.26" y1="474.98" x2="274.32" y2="474.98" width="0.1524" layer="91"/>
 <wire x1="325.12" y1="474.98" x2="325.12" y2="469.9" width="0.1524" layer="91"/>
 <junction x="325.12" y="474.98"/>
@@ -10921,8 +10931,11 @@ Close right = input is 7 - 28V</text>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="G"/>
-<wire x1="254" y1="391.16" x2="241.3" y2="391.16" width="0.1524" layer="91"/>
+<wire x1="254" y1="391.16" x2="248.92" y2="391.16" width="0.1524" layer="91"/>
 <label x="243.84" y="391.16" size="1.778" layer="95"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="248.92" y1="391.16" x2="241.3" y2="391.16" width="0.1524" layer="91"/>
+<junction x="248.92" y="391.16"/>
 </segment>
 <segment>
 <pinref part="SV11" gate="G$1" pin="4"/>
@@ -11248,14 +11261,12 @@ Close right = input is 7 - 28V</text>
 </net>
 <net name="VIN" class="0">
 <segment>
-<pinref part="U$9" gate="G$1" pin="VIN"/>
-<wire x1="20.32" y1="358.14" x2="20.32" y2="355.6" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="355.6" x2="45.72" y2="355.6" width="0.1524" layer="91"/>
-<label x="30.48" y="355.6" size="1.778" layer="95" rot="MR0"/>
 <pinref part="VIN" gate="G$1" pin="P"/>
+<wire x1="38.1" y1="355.6" x2="45.72" y2="355.6" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="370.84" x2="45.72" y2="370.84" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="370.84" x2="45.72" y2="355.6" width="0.1524" layer="91"/>
 <label x="60.96" y="370.84" size="1.778" layer="95" rot="MR0"/>
+<pinref part="D1" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -11350,7 +11361,7 @@ Close right = input is 7 - 28V</text>
 <net name="N$29" class="0">
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
-<pinref part="LED5" gate="G$1" pin="C"/>
+<pinref part="RELAY" gate="G$1" pin="C"/>
 <wire x1="340.36" y1="462.28" x2="340.36" y2="457.2" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="340.36" y1="457.2" x2="340.36" y2="454.66" width="0.1524" layer="91"/>
@@ -11539,7 +11550,7 @@ Close right = input is 7 - 28V</text>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="P3" gate="G$1" pin="C"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="325.12" y1="462.28" x2="325.12" y2="457.2" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="2"/>
@@ -11551,7 +11562,7 @@ Close right = input is 7 - 28V</text>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="LED2" gate="G$1" pin="C"/>
+<pinref part="P1" gate="G$1" pin="C"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="309.88" y1="462.28" x2="309.88" y2="457.2" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -11644,6 +11655,15 @@ Close right = input is 7 - 28V</text>
 <pinref part="SV20" gate="G$1" pin="11"/>
 <wire x1="93.98" y1="546.1" x2="93.98" y2="543.56" width="0.1524" layer="91"/>
 <label x="93.98" y="543.56" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="D1" gate="G$1" pin="C"/>
+<pinref part="U$9" gate="G$1" pin="VIN"/>
+<wire x1="20.32" y1="358.14" x2="20.32" y2="355.6" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="355.6" x2="33.02" y2="355.6" width="0.1524" layer="91"/>
+<label x="30.48" y="355.6" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 </nets>
